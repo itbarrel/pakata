@@ -1,0 +1,22 @@
+{
+  "name": "app",
+  "private": "true",
+  "dependencies": {
+    "desandro-matches-selector": "^2.0.2",
+    "esbuild": "^0.15.15",
+    "esbuild-rails": "^1.0.3",
+    "ev-emitter": "^2.1.2",
+    "fizzy-ui-utils": "^3.0.0",
+    "get-size": "^3.0.0",
+    "get-style-property": "^0.1.1",
+    "jquery": "1.12.4",
+    "masonry-layout": "^4.2.2",
+    "outlayer": "^2.1.1",
+    "popper.js": "^1.16.1",
+    "sass": "^1.62.1"
+  },
+  "scripts": {
+    "build": "node esbuild.config.js",
+    "build:css": "sass ./app/assets/stylesheets/application.bootstrap.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules"
+  }
+}
