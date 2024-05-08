@@ -2,6 +2,7 @@
   "name": "app",
   "private": "true",
   "dependencies": {
+    "bootstrap": "^5.3.3",
     "desandro-matches-selector": "^2.0.2",
     "esbuild": "^0.15.15",
     "esbuild-rails": "^1.0.3",
@@ -9,7 +10,9 @@
     "fizzy-ui-utils": "^3.0.0",
     "get-size": "^3.0.0",
     "get-style-property": "^0.1.1",
+    "isotope-layout": "^3.0.6",
     "jquery": "1.12.4",
+    "lightgallery": "1.6.9",
     "masonry-layout": "^4.2.2",
     "outlayer": "^2.1.1",
     "popper.js": "^1.16.1",

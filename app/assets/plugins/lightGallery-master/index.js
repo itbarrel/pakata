@@ -1,0 +1,1 @@
+const lightGallery = require("lightgallery");

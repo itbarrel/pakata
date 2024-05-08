@@ -718,7 +718,7 @@
         productFilterToggle();
         tabs();
         slickConfig();
-        productLightbox();
+        // productLightbox();
         rating();
         backToTop();
         stickyHeader();
@@ -733,7 +733,7 @@
         accordion();
         progressBar();
         customScrollbar();
-        select2Cofig();
+        // select2Cofig();
         carouselNavigation();
         dateTimePicker();
         $('[data-toggle="tooltip"]').tooltip();

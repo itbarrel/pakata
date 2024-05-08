@@ -1,17 +1,15 @@
-import "./jquery";
-// import "./fizzy-ui-utilties";
-// import "./plugins/jquery-1.12.4.min.js"; 
+import "./jquery/index.js";
 import "../plugins/popper.min.js"
 import "../plugins/owl-carousel/owl.carousel.min.js"
 import "../plugins/bootstrap4/js/bootstrap.min.js"
 import "../plugins/imagesloaded.pkgd.min.js"
-import "../plugins/masonry.pkgd.min.js"
-// import "../plugins/isotope.pkgd.min.js"
+import "../plugins/masonry/index.js"
+import "../plugins/isotope-layout/index.js"
 import "../plugins/jquery.matchHeight-min.js"
 import "../plugins/slick/slick/slick.min.js"
 import "../plugins/jquery-bar-rating/dist/jquery.barrating.min.js"
 import "../plugins/slick-animation.min.js"
-import "../plugins/lightGallery-master/dist/js/lightgallery-all.min.js"
+import "../plugins/lightGallery-master/index.js"
 import "../plugins/jquery-ui/jquery-ui.min.js"
 import "../plugins/sticky-sidebar/dist/sticky-sidebar.min.js"
 import "../plugins/jquery.slimscroll.min.js"
