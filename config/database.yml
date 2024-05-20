@@ -1,8 +1,18 @@
-development:
+default: &default
   adapter: postgresql
   encoding: utf8
-  database: pakdss_rails7_development
-  username: usama
-  password: 123
-  host: localhost
-  port: 5432
+  database: <%= ENV.fetch("DATABASE_NAME") { "pakata" } %>
+  username: <%= ENV.fetch("DATABASE_USER") { "postgres" } %>
+  password: <%= ENV.fetch("DATABASE_PASS") { "postgres" } %>
+  host: <%= ENV.fetch("DATABASE_HOST") { "localhost" } %>
+  port: <%= ENV.fetch("DATABASE_PORT") { 5432 } %>
+  pool: "<%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>"
+  statement_limit: 200
+
+development:
+  <<: *default
+  database: <%= ENV.fetch("DATABASE_NAME") { "pakata" } %>_dev
+
+test:
+  <<: *default
+  database: <%= ENV.fetch("DATABASE_NAME") { "pakata" } %>_test
