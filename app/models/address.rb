@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: addresses
@@ -21,4 +23,6 @@
 #  index_addresses_on_orders_id     (orders_id)
 #
 class Address < ApplicationRecord
+  belongs_to :customer
+  belongs_to :order
 end

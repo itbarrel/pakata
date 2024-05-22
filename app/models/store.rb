@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: stores
@@ -21,4 +23,8 @@
 #  index_stores_on_name  (name)
 #
 class Store < ApplicationRecord
+  has_many :users, dependent: destroy
+  has_many :products, class_name: 'Admin::Product', through: :users
+
+  enum :delivery_application, %i[cummulative max_delivery_only calculated]
 end

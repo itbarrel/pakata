@@ -109,10 +109,12 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_20_131557) do
     t.text "key_points"
     t.string "video_url"
     t.string "pdf_url"
+    t.bigint "user_id"
     t.bigint "brand_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["brand_id"], name: "index_admin_products_on_brand_id"
+    t.index ["user_id"], name: "index_admin_products_on_user_id"
   end
 
   create_table "admin_sizes", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -135,6 +137,17 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_20_131557) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "ckeditor_assets", force: :cascade do |t|
+    t.string "data_file_name", null: false
+    t.string "data_content_type"
+    t.integer "data_file_size"
+    t.string "data_fingerprint"
+    t.string "type", limit: 30
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
+    t.index ["type"], name: "index_ckeditor_assets_on_type"
   end
 
   create_table "customers", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|

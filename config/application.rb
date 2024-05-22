@@ -1,6 +1,8 @@
-require_relative "boot"
+# frozen_string_literal: true
 
-require "rails/all"
+require_relative 'boot'
+
+require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -10,6 +12,9 @@ module PakdssRails7
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
+
+    # Add ckeditor models path to autoload_paths
+    config.autoload_paths += %W[#{config.root}/app/models/ckeditor]
 
     # Configuration for the application, engines, and railties goes here.
     #

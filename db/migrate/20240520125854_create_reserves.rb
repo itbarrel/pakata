@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 class CreateReserves < ActiveRecord::Migration[7.0]
   def change
     create_table :reserves, id: :uuid do |t|
-
       t.integer :quantity, default: 0
       t.boolean :active, default: true
 

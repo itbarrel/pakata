@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: admin_products
@@ -21,10 +23,12 @@
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
 #  brand_id         :bigint
+#  user_id          :bigint
 #
 # Indexes
 #
 #  index_admin_products_on_brand_id  (brand_id)
+#  index_admin_products_on_user_id   (user_id)
 #
 class AdminProduct < ApplicationRecord
 end

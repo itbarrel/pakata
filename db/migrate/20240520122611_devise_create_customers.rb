@@ -3,15 +3,14 @@
 class DeviseCreateCustomers < ActiveRecord::Migration[7.0]
   def change
     create_table :customers, id: :uuid do |t|
-
       t.string :first_name
       t.string :last_name
       t.string :phone_number
       t.string :mobile_number
-      
+
       ## Database authenticatable
-      t.string :email,              null: false, default: ""
-      t.string :encrypted_password, null: false, default: ""
+      t.string :email,              null: false, default: ''
+      t.string :encrypted_password, null: false, default: ''
 
       ## Recoverable
       t.string   :reset_password_token

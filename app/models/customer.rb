@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: customers
@@ -30,6 +32,19 @@
 class Customer < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable
+
+  belongs_to :user, dependent: :destroy
+  has_many :addresses, dependent: :destroy
+  has_many :orders, dependent: :destroy
+  has_many :reviews, dependent: :destroy
+  has_many :reserves, class_name: 'Reserve', dependent: :destroy
+
+  accepts_nested_attributes_for :addresses
+
+  def name
+    "#{first_name} #{last_name}"
+  end
 end
